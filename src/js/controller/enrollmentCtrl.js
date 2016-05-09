@@ -5,6 +5,7 @@ angular.module('todoApp')
         self.enroll_list = [];
         self.section = [{id: 'section1', name: '450'}, {id: 'section2', name: '451'}, {id: 'section3', name: '452'}];
         self.section_list = [];
+        self.studentID = enrollment_service.studentID;
 
         var student = {
           ID: '',
