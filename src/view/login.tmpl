@@ -1,0 +1,34 @@
+<div class="container">
+ 
+  <div ng-controller="LoginController as loginCtrl">
+    
+      <center><h1 style="color: white;"><b>KU Registration</b></h1></center>
+ 
+    
+    <div class="login-container">
+      <div id="output"></div>
+      <img src="https://cdn0.iconfinder.com/data/icons/business-and-management-round-flat-icons/500/document-512.png" width="100" height="100" border="0" class"img-circle"></a>
+      <h1></h1>
+      <div class="form-box">
+        <form action="" method="">
+          <div class="input-group">
+            <span type="usericon" class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="username" type="user" placeholder="student ID" ng-model="username">
+          </div>
+          <div class="input-group">
+            <span type="lockicon" class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <input type="password" placeholder="password" ng-model="password">
+          </div>
+        </form>
+      </div>
+
+      <div class="checkbox">
+        <input type="checkbox" id="checkbox1" >
+        <label>Remember me</label>
+      </div>
+
+      <button ng-click="loginCtrl.login(username, password)" ui-sref="profile"class="btn btn-info btn-block login" type="button">Log in</button>
+    </div>
+    <center><h5 style="color: white;">For the purpose of demonstration, please use any student ID and password</h5></center>
+  </div>
+</div>

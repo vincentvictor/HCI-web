@@ -1,0 +1,98 @@
+.dual-list .list-group {
+    margin-top: 8px;
+}
+
+.list-left li, .list-right li {
+    cursor: pointer;
+}
+
+.list-arrows {
+    padding-top: 100px;
+}
+
+.list-arrows button {
+    margin-bottom: 20px;
+}
+
+.list-group-item
+{
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.glyphicon-remove-sign{
+  position: absolute;
+  top: -10px;
+  left: 70px;   
+  font-size: 1.5em;
+}
+
+.glyphicon-search{
+  top: 0px;
+}
+
+.dropdown-toggle{
+  position: absolute;
+  top: 5px;
+  right: 20px;   
+}
+
+#course-list{
+  border-radius: 0px;
+}
+#subject-list{
+	margin-top: -20px;
+	margin-bottom: -20px;
+  margin-left: -20px;
+  border-radius: 0px;
+}
+
+#dropdown-list{
+	margin-top: -20px;
+	margin-bottom: -20px;
+  right: -10px;
+}
+
+#enroll-group{
+	margin-top: 0px;
+	margin-bottom: -1px;
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+#enroll-search{
+	margin-bottom: 8px;
+}
+
+#text-course{
+  margin-top: -5px;
+}
+#dual-right-panel{
+  background-color: none;
+  border-color: transparent !important;
+  border-width: 3px;
+  border-radius: 10px;
+}
+#dual-sub-right-panel{
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+#dual-left-panel{
+  background-color: none;
+  border-color: transparent !important;
+  border-width: 3px;
+  border-radius: 10px;
+}
+#dual-sub-left-panel{
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+body{
+  background-color: transparent !important;
+}

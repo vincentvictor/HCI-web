@@ -1,0 +1,85 @@
+<div class="container">
+  <div ng-controller="ProfileController as profileCtrl" ng-hide="isActive('/profile')">  
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
+    <nav class="navbar navbar-default"> <!-- nav-bar -->
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          </button>
+          <a class="navbar-brand"><b>KU Registration</b></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a ui-sref="profile">My Profile<span class="sr-only">(current)</span></a></li>
+            <li><a ui-sref="courseDes">Course Description</a></li>
+            <li><a ui-sref="enrollment">Enrollment</a></li>
+            <li><a ui-sref="report">Report</a></li>
+          </ul>
+      
+          <ul class="nav navbar-nav navbar-right">
+            <li><a ui-sref="login">Log out</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav><!-- /.nav-bar -->
+
+    <div class="well profile col-sm-12">
+      <div class="profile col-sm-6">
+        <center>
+          <h1></h1>
+          <img src="https://cdn4.iconfinder.com/data/icons/longico/224/longico-23-512.png" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
+          <h1><b> Nichamon Han-idhikul</b></h1>
+        </center>
+        <div class "detail-box" id="name-left-box" >
+          <div class="col-md-12 col-xs-12 detail-control">
+            <div class="control">
+                <div class="profile-label">Student ID</div>
+                <input type="text" class="form-control" id="form-control-profile" value={{profileCtrl.studentID}}>
+            </div>
+            <div class="control">
+              <div class="profile-label">E-mail</div>
+                <input type="text" class="form-control" id="form-control-profile" value=b{{profileCtrl.studentID}}@ku.ac.th>
+            </div>
+            <div class="control">
+              <div class="profile-label">Student Status</div>
+                <input type="text" class="form-control" id="form-control-profile" value="Currently Studying"/>
+            </div>
+          </div>
+        </div>   <!--left description-->
+      </div> <!-- profile col-sm-6 left-->
+
+      <div class="profile col-sm-6">
+        <div class "detail-box">
+          <div class="col-md-12 col-xs-12 detail-control">
+            <div class="control">
+              <div class="profile-label">Campus</div>
+              <input type="text" class="form-control" id="form-control-profile" value="Bangkhen"/>
+            </div>
+            <div class="control">
+              <div class="profile-label">Faculty</div>
+              <input type="text" class="form-control" id="form-control-profile" value="Engineering"/>
+            </div>
+            <div class="control">
+              <div class="profile-label">Department</div>
+              <input type="text" class="form-control" id="form-control-profile" value="Computer Engineering"/>
+            </div>
+            <div class="control">
+              <div class="profile-label">Major Field</div>
+              <input type="text" class="form-control" id="form-control-profile" value="Software and Knowledge Engineering"/>
+            </div>
+            <div class="control">
+              <div class="profile-label">Program Type</div>
+              <input type="text" class="form-control" id="form-control-profile" value="International Undergraduate Program"/>
+            </div>
+            <div class="control">
+              <div class="profile-label">Advisor</div>
+              <input type="text" class="form-control" id="form-control-profile" value="Putchong Uthayopas (E9006)"/>
+            </div>           
+          </div>
+        </div>
+      </div> <!-- profile col-sm-6 right-->
+    </div> <!--well profile col-sm12 -->            
+  </div>
+</div>

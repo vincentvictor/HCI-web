@@ -1,0 +1,103 @@
+<div class="container" ng-controller="EnrollmentController as enrollCtrl">
+
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
+    <nav class="navbar navbar-default"> <!-- nav-bar -->
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          </button>
+          <a class="navbar-brand"><b>KU Registration</b></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a ui-sref="profile">My Profile</a></li>
+            <li><a ui-sref="courseDes">Course Description</a></li>
+            <li class="active"><a ui-sref="enrollment">Enrollment<span class="sr-only">(current)</span></a></li>
+            <li><a ui-sref="report">Report</a></li>
+          </ul>
+          
+          <ul class="nav navbar-nav navbar-right">
+            <li><a ui-sref="login">Log out</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav><!-- /.nav-bar -->
+   
+
+    <!-- Courses -->
+    <div class="container-fluid">
+      <div class="well dual-list list-left col-md-5" id="dual-left-panel">
+
+        <div class="well text-left" id="dual-sub-left-panel">
+        <h3 id="text-course"><b>Course List</b></h3>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="input-group">
+                <span class="input-group-addon glyphicon glyphicon-search"></span>
+                <input type="text" name="SearchDualList" class="form-control" placeholder="search by ID or name" ng-model="searchKey"/>
+              </div>
+            </div>
+
+            
+          </div>
+          <div class="list-group">
+            <a class="list-group-item" ng-click="enrollCtrl.add(course)" ng-click="enrollCtrl.addSection()" ng-repeat="course in enrollCtrl.course_list | filter:searchKey" id="course-list">
+              <b>{{course.id}}</b>
+              {{course.name.en}}
+              
+            </a>
+          </div>
+        </div>
+      </div> <!-- end of Courses -->
+
+
+      <div class="list-arrows col-md-1 text-center">
+        <a class="btn btn-default btn-sm disabled">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+        <h1></h1>
+        <a class="btn btn-default btn-sm disabled">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+      </div>
+
+      <!-- My List -->
+      <div class="well dual-list list-right col-md-6" id="dual-right-panel"> <!-- dual list -->
+        <div class="well" id="dual-sub-right-panel">
+        <h3 id="text-course" ><b>My Courses</b></h3>
+          <div class="row" id="enroll-search"> <!-- search -->
+            
+       
+          
+          <!-- Enroll list -->
+          <div class="list-group well row" id="enroll-group" ng-repeat="course in enrollCtrl.enroll_list" >
+            <div class="col-md-10" > <!-- Each subject -->
+              <a class="list-group-item clearfix" id="subject-list">
+                <b>{{course.id}}</b>
+                {{course.name.en}}    
+              </a>
+            </div>
+            <div class="col-md-2" id="dropdown-list"> <!-- Each dropdown -->
+              <div class="dropdown">
+                <button type="button" class="btn btn-default dropdown-toggle" id="dropdownMenu" data-toggle="dropdown">{{enrollCtrl.section_list[enrollCtrl.enroll_list.indexOf(course)]}}<span class="caret"></span></button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+                  <li ng-repeat="section in enrollCtrl.section">
+                    <a ng-click="enrollCtrl.setSection(course, section)">{{section.name}}</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <span href="#" ng-click="enrollCtrl.remove(course)" class="glyphicon glyphicon-remove-sign" style="color: black"></span>
+            </div>
+          </div> <!-- /.Enroll list -->
+      </div> <!-- /.well -->
+
+      <button type="button" class="col-md-offset-7 col-md-4 btn btn-info" ng-click="enrollCtrl.submit()"><b>Submit</b></button>
+      </div>
+    </div><!-- /.row -->
+  </div><!-- /.well dual-list -->
+
+</div><!-- /.container --> 
