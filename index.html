@@ -3,7 +3,10 @@
   <head>
     <!-- CSS file -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="src/css/todo.css">
+    <link rel="stylesheet" href="src/css/login.css">
+    <link rel="stylesheet" href="src/css/enrollment.css">
+    <link rel="stylesheet" href="src/css/profile.css">
+    <link rel="stylesheet" href="src/css/courseDes.css">
   </head>
   <body>
     <!-- Import scripts -->
@@ -13,14 +16,20 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <!-- App controller -->
-    <script src="src/js/controller/todo.js"></script>
+    <script src="src/js/controller/loginCtrl.js"></script>
+    <script src="src/js/controller/reportCtrl.js"></script>
+    <script src="src/js/controller/enrollmentCtrl.js"></script>
+    <script src="src/js/controller/profileCtrl.js"></script>
+    <script src="src/js/controller/courseDesCtrl.js"></script>
     <script src="src/js/route/route.js"></script>
 
-    <!-- some navigation -->
-    <ul class="nav nav-pills">
-    <li role="presentation"><a ui-sref="home">Home</a></li>
-    <li role="presentation"><a ui-sref="changepage">Change Page</a></li>
-  </ul>
+    <!-- App service -->
+    <script src="src/js/service/service.js"></script>
+
+    <!-- Navigation -->
+    
+
+
 
     <div ui-view></div>
   </body>
