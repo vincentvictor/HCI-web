@@ -75,29 +75,55 @@
           
           <!-- Enroll list -->
           <div class="list-group well row" id="enroll-group" ng-repeat="course in enrollCtrl.enroll_list" >
-            <div class="col-md-10" > <!-- Each subject -->
-              <a class="list-group-item clearfix" id="subject-list">
-                <b>{{course.id}}</b>
-                {{course.name.en}}    
-              </a>
-            </div>
-            <div class="col-md-2" id="dropdown-list"> <!-- Each dropdown -->
-              <div class="dropdown">
-                <button type="button" class="btn btn-default dropdown-toggle" id="dropdownMenu" data-toggle="dropdown">{{enrollCtrl.section_list[enrollCtrl.enroll_list.indexOf(course)]}}<span class="caret"></span></button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
-                  <li ng-repeat="section in enrollCtrl.section">
-                    <a ng-click="enrollCtrl.setSection(course, section)">{{section.name}}</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <span href="#" ng-click="enrollCtrl.remove(course)" class="glyphicon glyphicon-remove-sign" style="color: black"></span>
-            </div>
+            <div class="col-md-12" > <!-- Each subject -->
+
+              <div class="list-group-item clearfix" id="subject-list">
+                <div class="col-md-10">
+                  <b>{{course.id}}</b>
+                  {{course.name.en}}    
+                </div>
+
+                <div class="col-md-2">
+                    <span href="#" ng-click="enrollCtrl.remove(course)" class="glyphicon glyphicon-remove-sign" style="color: black"></span>
+                </div>
+
+                <div class="col-md-12">
+                  &nbsp;  
+                </div>
+
+                <div class="col-md-2"><b>Section<b></div> <!-- Section: -->
+
+                <div class="dropdown col-md-2">
+                  <button type="button" class="btn btn-default dropdown-toggle" id="dropdownMenu" data-toggle="dropdown">{{enrollCtrl.section_list[enrollCtrl.enroll_list.indexOf(course)]}}<span class="caret"></span></button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+                    <li ng-repeat="section in enrollCtrl.section">
+                      <a ng-click="enrollCtrl.setSection(course, section)">{{section.name}}</a>
+                    </li>
+                  </ul>
+                </div> <!-- dropdown -->
+
+                <div class="col-md-3"><center><b>Type of Regis<b><center></div> <!-- Type of Registration -->
+
+                <div class="dropdown col-md-2">
+                  <button type="button" class="btn btn-default dropdown-toggle" id="dropdown-regis" data-toggle="dropdown">{{enrollCtrl.regisType_list[enrollCtrl.enroll_list.indexOf(course)]}}<span class="caret"></span></button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+                    <li ng-repeat="regisType in enrollCtrl.regisType">
+                      <a ng-click="enrollCtrl.setRegisType(course, regisType)">{{regisType.name}}</a>
+                    </li>
+                  </ul>
+                </div> <!-- regisType -->
+
+                <div class="dropdown col-md-3">
+                  <b>Credit:</b> {{course.credit.total}}
+                </div>
+              </div><!-- /.subject list -->
           </div> <!-- /.Enroll list -->
       </div> <!-- /.well -->
 
-      <button type="button" class="col-md-offset-7 col-md-4 btn btn-info" ng-click="enrollCtrl.submit()"><b>Submit</b></button>
+
+      <div class="col-md-offset-7 col-md-4"><h4><b>Total Credits: xx</b></h4></div>
+      <div class="col-md-12">&nbsp;  </div>
+      <button type="button" class="col-md-offset-8 col-md-3 btn btn-danger" ng-click="enrollCtrl.submit()"><h4><b>Submit</b></h4></button>
       </div>
     </div><!-- /.row -->
   </div><!-- /.well dual-list -->

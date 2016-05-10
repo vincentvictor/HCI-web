@@ -2,22 +2,22 @@
  
   <div ng-controller="LoginController as loginCtrl">
     
-      <center><h1 style="color: white;"><b>KU Registration</b></h1></center>
+    <center><h1 style="color: white;"><b>KU Registration</b></h1></center>
  
     
     <div class="login-container">
       <div id="output"></div>
-      <img src="src/img/ku-logo.png" width="100" height="100" border="0" class"img-circle"></a>
+      <img src="src/img/ku-logo.png" width="200" height="200" border="0" class"img-circle"></a>
       <h1></h1>
       <div class="form-box">
         <form action="" method="">
           <div class="input-group">
             <span type="usericon" class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input name="username" type="user" placeholder="student ID" ng-model="username">
+            <input name="username" type="user" placeholder= "Student ID" ng-model="username">
           </div>
           <div class="input-group">
             <span type="lockicon" class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-            <input type="password" placeholder="password" ng-model="password">
+            <input type="password" placeholder="Password" ng-model="password">
           </div>
         </form>
       </div>
@@ -27,7 +27,7 @@
         <label>Remember me</label>
       </div>
 
-      <button ng-click="loginCtrl.login(username, password)" ui-sref="profile"class="btn btn-info btn-block login" type="button">Log in</button>
+      <button ng-click="loginCtrl.login(username, password)" ui-sref="profile"class="btn btn-info btn-block login" type="button"><center><h4>Log in</h4><center></button>
     </div>
     <center><h4 style="color: white;">For the purpose of demonstration, please use any student ID and password</h4></center>
   </div>

@@ -27,11 +27,11 @@
       </div><!-- /.container-fluid -->
     </nav><!-- /.nav-bar -->
 
-	<div class="col-md-6 col-md-offset-1">
+	<div class="col-md-6 col-md-offset-0">
     <center><h3 style="color: white;"><b>Registration courses</b></h3></center>
     <div class="list-group">
       <a class="list-group-item" ng-repeat="enroll_subject in reportCtrl.enroll_list">
-        <b>{{enroll_subject.id}}</b>
+        <b>{{enroll_subject.id}}&nbsp;</b>
         {{enroll_subject.name.en}}
       </a>
     </div>
@@ -45,6 +45,16 @@
       </a>
     </div>
   </div>
+
+  <div class="col-md-2 col-md-offset-0">
+    <center><h4 style="color: white;"><b>Type of Registration</b></h4></center>
+    <div class="list-group">
+      <a class="list-group-item" ng-repeat="regisType_list in reportCtrl.regisType_list track by $index">
+        <center><b>{{regisType_list}}</b></center>
+      </a>
+    </div>
+  </div>
+
   <div class="col-md-2 col-md-offset-0">
     <center><h3 style="color: white;"><b>Credit</b></h3></center>
     <div class="list-group">
@@ -59,7 +69,7 @@
 
   <div class="col-lg-2 col-md-offset-5">
     <center>
-    <button class="btn btn-danger btn-block" type="button" ng-click="reportCtrl.viewJSON()">View JSON</button>
+    <button class="btn btn-primary btn-block" type="button" ng-click="reportCtrl.viewJSON()"><h4>View JSON</h4></button>
     </center>
   </div>
 </div>
